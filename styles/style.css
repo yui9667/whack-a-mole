@@ -1,5 +1,6 @@
 body {
   background-image: url(/images/background.png);
+  /*background-repeat: no-repeat;*/
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -13,8 +14,9 @@ body {
   flex-wrap: wrap;
   width: 540px;
   height: 540px;
-  background-color: aqua;
+
   margin: 0 auto;
+  padding: 20px;
 }
 
 .cursor {
@@ -28,7 +30,13 @@ body {
   transform: translate(-20%, -20%);
   transition: transform 0.1s;
 }
-.cursor .active {
+.active {
   transform: translate(-20%, -20%) rotate(-45deg);
-  background-color: black;
+}
+
+#board div {
+  width: 180px;
+  height: 180px;
+  background-image: url(../images/hole.png);
+  background-size: contain;
 }
