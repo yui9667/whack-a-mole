@@ -1,5 +1,6 @@
 const cursor = document.querySelector(".cursor");
-
+const scoreEl = document.querySelector(".score");
+let score = 0;
 window.addEventListener("mousemove", (e) => {
   cursor.style.top = e.pageY + "px";
   cursor.style.left = e.pageX + "px";
@@ -21,4 +22,23 @@ function setGame() {
     title.id = i.toString();
     document.getElementById("board").appendChild(title);
   }
+  setInterval(setMole, 2000);
+}
+function getRandomTitle() {
+  let num = Math.floor(Math.random() * 9);
+  return num.toString();
+}
+
+function setMole() {
+  let mole = document.createElement("img");
+  mole.src = "images/mole.png";
+  mole.classList.add("moleImg");
+  mole.addEventListener("click", () => {
+    score += 10;
+    scoreEl.textContent = score;
+    score.textContent = "Score:";
+  });
+  let num = getRandomTitle();
+  currMoleTitle = document.getElementById(num);
+  currMoleTitle.appendChild(mole);
 }
