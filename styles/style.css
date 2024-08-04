@@ -47,7 +47,8 @@ body {
   overflow: hidden;
 }
 
-.moleImg {
+.moleImg,
+.moleHitImg {
   width: 100%;
   position: absolute;
   left: 50%;
@@ -91,4 +92,8 @@ h1 {
   justify-content: center;
   font-size: 20px;
   gap: 15px;
+}
+.timeTitle,
+.score-container .scoreTitle {
+  margin-bottom: 0px;
 }

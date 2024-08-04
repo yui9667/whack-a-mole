@@ -1,6 +1,7 @@
 const cursor = document.querySelector(".cursor");
 const scoreEl = document.querySelector(".score");
 let score = 0;
+const timerEl = dpcument.querySelector("time");
 window.addEventListener("mousemove", (e) => {
   cursor.style.top = e.pageY + "px";
   cursor.style.left = e.pageX + "px";
@@ -33,12 +34,19 @@ function setMole() {
   let mole = document.createElement("img");
   mole.src = "images/mole.png";
   mole.classList.add("moleImg");
+
   mole.addEventListener("click", () => {
     score += 10;
     scoreEl.textContent = score;
-    score.textContent = "Score:";
+    mole.src = "images/hitMole.png";
+    mole.style.marginBottom = "20px";
+    let timer = null;
+    clearTimeout(timer);
   });
+
   let num = getRandomTitle();
   currMoleTitle = document.getElementById(num);
   currMoleTitle.appendChild(mole);
+
+  setTimeout(() => currMoleTitle.removeChild(mole), 1000);
 }
