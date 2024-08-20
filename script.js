@@ -19,11 +19,6 @@ window.addEventListener("mouseup", () => {
   cursor.classList.remove("active");
 });
 
-function start() {
-  timer2 = setInterval(updateTimer, 1000);
-  updateTimer();
-  timeBtn.hide();
-}
 function setGame() {
   for (let i = 0; i < 9; i++) {
     let title = document.createElement("div");
@@ -46,6 +41,8 @@ function setMole() {
     scoreEl.textContent = score;
     scoreEl.style.margin = "0px";
     mole.src = "images/hitMole.png";
+
+    /*Moleをクリックすると点数が表示される為のAddEventListener。その中にSetTimeOutを入れる事によって2秒すればMoleが消えるように作成している */
     setTimeout(() => {
       if (mole.parentElement) {
         mole.parentElement.removeChild(mole);
