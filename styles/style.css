@@ -124,6 +124,7 @@ h1 {
   box-shadow: none;
 }
 .result-container {
+  display: none;
   width: 100%;
   max-width: 500px;
   padding: 30px;
