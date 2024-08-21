@@ -1,3 +1,5 @@
+
+
 body {
   /*background-repeat: no-repeat;*/
   padding: 0;
@@ -8,7 +10,7 @@ body {
   overflow: hidden;
   width: 100vw;
   height: 100vh;
-  background-image: url(/images/background.png);
+  background-image: url(/images/background.png)!important;
 }
 .container {
   overflow: hidden;
