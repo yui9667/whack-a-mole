@@ -5,7 +5,10 @@ body {
   text-align: center;
   color: #fff;
   overflow: hidden;
-  background-image: url(/images/background.png);
+
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/images/background.png) !important;
 }
 .container {
   overflow: hidden;
