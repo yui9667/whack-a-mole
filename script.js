@@ -42,6 +42,7 @@ function addEl() {
   board.style.display = "flex";
   timeContainer.style.display = "flex";
   scoreContainer.style.display = "flex";
+  resultContainer.style.display = "none";
 }
 /* Choose difficulty and changing time and mole speed */
 function chooseTime() {

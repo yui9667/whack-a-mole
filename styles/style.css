@@ -124,16 +124,18 @@ h1 {
   box-shadow: none;
 }
 .result-container {
-  display: none;
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   padding: 30px;
   letter-spacing: 2px;
   margin: auto;
-  background-color: #fff;
-  color: #000;
+  border-radius: 20px 0px;
+  background-color: #61ae14;
+  color: #fff;
+  font-size: 30px;
+  border: #fff solid 3px;
 }
 .result {
-  font-size: 30px;
+  font-size: 40px;
   letter-spacing: 2px;
 }
